@@ -47,6 +47,7 @@
 
 /datum/ammo/bullet/sniper/anti_materiel
 	name = "anti-materiel sniper bullet"
+	max_range = 64 //doubled from 32, it's an AMR sniper bullet - Bam
 
 	shrapnel_chance = 0 // This isn't leaving any shrapnel.
 	accuracy = HIT_ACCURACY_TIER_8
