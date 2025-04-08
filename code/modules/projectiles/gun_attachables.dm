@@ -1296,7 +1296,7 @@ Defined in conflicts.dm of the #defines folder.
 	/// How far in the perpendicular axis the scope can move in either direction
 	var/perpendicular_scope_range = 7
 	/// How far in each direction the scope should see. Default human view size is 7
-	var/scope_viewsize = 7
+	var/scope_viewsize = 10
 	/// The current X position of the scope within the sniper's view box. 0 is center
 	var/scope_offset_x = 0
 	/// The current Y position of the scope within the sniper's view box. 0 is center
@@ -1316,7 +1316,7 @@ Defined in conflicts.dm of the #defines folder.
 	/// % chance for the scope to drift on process without a spotter using their scope
 	var/unspotted_drift_chance = 90
 	/// If the scope should use do_afters for adjusting and moving the sight
-	var/slow_use = TRUE
+	var/slow_use = FALSE
 	/// Cooldown for interacting with the scope's adjustment or position
 	COOLDOWN_DECLARE(scope_interact_cd)
 	/// If the user is currently holding their breath
@@ -1334,7 +1334,7 @@ Defined in conflicts.dm of the #defines folder.
 	/// If there is currently a spotter using the linked spotting scope
 	var/spotter_spotting = FALSE
 	/// How much time it takes to adjust the position of the scope. Adjusting the offset will take half of this time
-	var/adjust_delay = 1 SECONDS
+	var/adjust_delay = 0.5 SECONDS
 
 /obj/item/attachable/vulture_scope/Initialize(mapload, ...)
 	. = ..()
